@@ -1,0 +1,17 @@
+:root {
+  --cor-branca: #fff;
+  --cor-fundo-roxo: linear-gradient(150deg, #000000, #9e00ff);
+  --cor-fundo-roxo-claro: #9443d8;
+  --cor-fundo-imagem: linear-gradient(to right, #8A35C8, #18C063, #00EEA2);
+  --cor-fundo-escuro: #040203;
+
+  --fonte-primaria: "Poppins", sans serif;
+  --fonte-secundaria: "Raleway", sans serif;
+  --fonte-gigante: 4.5rem;
+  --fonte-extra-grande: 3rem;
+  --fonte-grande: 2.4rem;
+  --fonte-pequena: 2rem;
+  --fonte-normal: 1.6rem;
+
+  --mobile-padding: 30px;
+}
