@@ -11,7 +11,7 @@ body {
   animation: gradient-animation 15s ease infinite;
   font-family: var(--fonte-primaria);
   font-size: var(--fonte-normal);
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -81,6 +81,26 @@ body {
   max-width: 50%;
 }
 
+.home .informacoes h1 {
+  font-family: var(--fonte-secundaria);
+  font-size: var(--fonte-gigante);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.home .informacoes p {
+  font-family: var(--fonte-secundaria);
+  font-size: var(--fonte-pequena);
+  margin-bottom: 10px;
+}
+
+.home .informacoes h2 {
+  font-family: var(--fonte-secundaria);
+  font-size: var(--fonte-grande);
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
 .home .redes-sociais {
   display: flex;
   align-items: center;
@@ -89,7 +109,6 @@ body {
 
 .home .redes-sociais a i {
   border-radius: 50%;
-  border: solid 0.1rem #fff;
   padding: 1rem;
   width: 5rem;
   height: 5rem;
@@ -146,26 +165,6 @@ body {
   display: none;
 }
 
-.home .informacoes h1 {
-  font-family: var(--fonte-secundaria);
-  font-size: var(--fonte-gigante);
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.home .informacoes p {
-  font-family: var(--fonte-secundaria);
-  font-size: var(--fonte-grande);
-  margin-bottom: 10px;
-}
-
-.home .informacoes h2 {
-  font-family: var(--fonte-secundaria);
-  font-size: var(--fonte-grande);
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-}
-
 /* PROJETOS & ARTIGOS*/
 
 .projetos,
@@ -205,11 +204,23 @@ body {
 
 .semi-bold {
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--fonte-pequena);
+}
+
+.jobTitle,
+.company {
+  font-weight: 500;
+  font-size: var(--fonte-grande);
+}
+
+.description {
+  font-size: var(--fonte-normal);
+  font-family: var(--fonte-secundaria);
+  margin: 5px 0;
 }
 
 .resume {
-  width: 800px;
+  width: 50%;
   height: auto;
   display: flex;
 }
@@ -218,9 +229,8 @@ body {
   margin-bottom: 20px;
 }
 
-.resume .resume_item {
-  padding: 25px 0;
-  border-bottom: 2px solid #b1eaff;
+.resume .resume_right .bold {
+  color: #0bb5f4;
 }
 
 .resume .resume_right .resume_item:last-child {
@@ -235,15 +245,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.resume .resume_right {
-  width: 520px;
-  padding: 25px;
-}
-
-.resume .resume_right .bold {
-  color: #0bb5f4;
-}
-
 .resume .resume_right .resume_work ul,
 .resume .resume_right .resume_education ul {
   padding-left: 40px;
@@ -255,7 +256,7 @@ body {
 }
 
 .resume .resume_right ul li .date {
-  font-size: 16px;
+  font-size: var(--fonte-pequena);
   font-weight: 500;
   margin-bottom: 15px;
 }
@@ -321,6 +322,10 @@ body {
 
 .resume .resume_right .resume_hobby ul li:last-child:before {
   display: none;
+}
+.resume .resume_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #b1eaff;
 }
 
 /* END OF CURRÍCULO */
@@ -505,8 +510,12 @@ body {
 }
 
 .container-form .field:focus-within label {
-  color: #000;
+  background-image: var(--cor-fundo-texto);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   letter-spacing: 2px;
+  transition: all 0.3s ease;
 }
 
 .container-form input,
@@ -514,7 +523,9 @@ body {
   background: rgba(255, 255, 255, 0.5);
   border: none;
   border-radius: 4px;
-  box-shadow: 0 0 0 4px #dfdfdf;
+  box-shadow: 0 0 0 3px #dfdfdf;
+  margin-top: 5px;
+  transition: all 0.3s ease;
 }
 
 .container-form input:focus,
@@ -533,21 +544,50 @@ body {
 
 .container-form button {
   background: #2f4ad0;
+  border: 2px solid;
+  border-image: var(--cor-fundo-imagem) 1;
   padding: 8px 16px;
   margin: 16px 0 50px 0;
   color: #fff;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
-  box-shadow: 0 0 0 4px #dfdfdf;
+  transition: all 0.3s ease;
+  border-radius: 4px;
 }
 
 .container-form button:hover {
-  letter-spacing: 2px;
   box-shadow: none;
+  background: var(--cor-fundo-imagem);
+  border-image: none;
 }
 
 /* END OF CONTATO */
+
+/* SCROLLTOP */
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  right: 40px;
+  bottom: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.top.active {
+  bottom: 10px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.scrolltop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 5rem;
+}
 
 /* Footer */
 footer p {

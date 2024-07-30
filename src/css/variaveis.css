@@ -2,7 +2,8 @@
   --cor-branca: #fff;
   --cor-fundo-roxo: linear-gradient(150deg, #000000, #9e00ff);
   --cor-fundo-roxo-claro: #9443d8;
-  --cor-fundo-imagem: linear-gradient(to right, #8A35C8, #18C063, #00EEA2);
+  --cor-fundo-texto: linear-gradient(to right, #ceeef7, #aaebff, #43abca);
+  --cor-fundo-imagem: linear-gradient(to right, #8a35c8, #18c063, #00eea2);
   --cor-fundo-escuro: #040203;
 
   --fonte-primaria: "Poppins", sans serif;
