@@ -136,3 +136,12 @@ window.addEventListener("scroll", () => {
     toTop.classList.remove("active");
   }
 });
+
+function clickMenu() {
+  const menuMobile = document.querySelector("#menu-mobile");
+  if (menuMobile.style.display == "block") {
+    menuMobile.style.display = "none";
+  } else {
+    menuMobile.style.display = "block";
+  }
+}

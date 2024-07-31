@@ -1,4 +1,13 @@
-@media(max-width: 1280px) {
+@media (max-width: 1024px) {
+  body {
+    max-width: 1024px;
+    margin: 50px 0;
+  }
+
+  .cabecalho {
+    padding: var(--mobile-padding);
+  }
+
   .home {
     gap: 0;
     margin: 50px 0;
@@ -23,48 +32,83 @@
     justify-content: center;
   }
 
-  .projetos .container-projetos {
+  .curriculo {
+    /* centralizar conteúdo */
+    max-width: 100vw;
+    margin: 0 auto;
     padding: 0 var(--mobile-padding);
   }
 
-  .header {
-    padding: var(--mobile-padding);
+  .projetos .container-projetos,
+  .blog .container-blog {
+    padding: 0 var(--mobile-padding);
   }
 }
 
 @media (max-width: 900px) {
-  .header .menu {
+  .cabecalho .menu #menu-collapse {
     display: block;
+    width: 50px;
+    height: 50px;
+    background: var(--cor-fundo-roxo-claro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }
 
-  /* pega todos os itens que após o input e que sao irmaos dele */
-  .header .menu input:checked~ul {
-    display: block;
-  }
-
-  .header .menu {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    z-index: 1;
-  }
-
-  .header .menu ul {
+  .cabecalho .menu ul {
     display: none;
-    background-color: var(--cor-fundo-roxo-claro);
-    padding: 20px;
-    transition: all .3s ease;
   }
 
-  .header .menu li a {
-    color: var(--cor-branca);
-    text-align: center;
-    padding: 0;
-    display: block;
+  .curriculo {
+    /* centralizar conteúdo */
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 var(--mobile-padding);
+  }
+
+  .curriculo .resume {
+    width: 80%;
+  }
+
+  .projetos .container-projetos,
+  .blog .container-blog {
+    padding: 0 var(--mobile-padding);
   }
 }
 
-@media(max-width: 425px) {
+@media (max-width: 768px) {
+  /*  .cabecalho .menu #menu-collapse {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: var(--cor-fundo-roxo-claro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .cabecalho .menu ul {
+    display: none;
+  } */
+}
+
+@media (max-width: 425px) {
+  .cabecalho .logo {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .home {
+    max-width: 425px;
+    margin: 50px 0;
+  }
 
   .home .informacoes {
     gap: 30px;
@@ -84,27 +128,4 @@
     font-size: 2rem;
     padding: 0.9rem;
   }
-
-  .projetos {
-    padding: 30px;
-  }
-
-  .projetos .container-projetos {
-    place-items: center;
-  }
-
-  .projetos .container-projetos .projeto { 
-    height: 500px;
-    overflow: hidden;
-  }
-
-  /* .projetos .container-projetos .projeto {
-    width: 300px;
-    height: 80%;
-  } */
-
-  .projetos .titulo {
-    font-size: var(--fonte-extra-grande);
-  }
-
 }
